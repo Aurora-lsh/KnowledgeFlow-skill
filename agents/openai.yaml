@@ -1,0 +1,13 @@
+interface:
+  display_name: "KnowledgeFlow 学习整理"
+  short_description: "上传学习资料，按知识点融合并通过 Notion 插件保存学习文档"
+  default_prompt: "使用 $knowledgeflow，通过 Notion 插件整理我上传的学习资料。"
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "notion"
+      description: "使用用户已连接的 Notion 插件检索、创建与更新学习文档"
+      transport: "streamable_http"
+      url: "https://mcp.notion.com/mcp"
+policy:
+  allow_implicit_invocation: true
